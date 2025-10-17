@@ -8,7 +8,7 @@ export const HomePage = () => {
       <header className="home-page__header">
         <nav className="home-page__nav">
           <div className="home-page__logo">
-            <div className="home-page__logo-icon">T</div>
+            <div className="home-page__logo-icon">TH</div>
             <span className="home-page__logo-text">TaskHub</span>
           </div>
           <div className="home-page__nav-links">
