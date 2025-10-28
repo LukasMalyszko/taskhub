@@ -1,108 +1,109 @@
 // Navbar component SCSS with BEM methodology
+@import '../../styles/variables';
 
 .navbar {
-  background-color: white;
-  border-bottom: 1px solid #e2e8f0;
-  padding: 1rem 1.5rem;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  background-color: $color-white;
+  border-bottom: 1px solid $color-slate-200;
+  padding: $spacing-4 $spacing-6;
+  box-shadow: $shadow-sm;
 
   &__nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1400px;
+    max-width: $container-2xl;
     margin: 0 auto;
   }
 
   &__logo {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: $spacing-2;
     text-decoration: none;
     color: inherit;
 
     &:hover {
-      opacity: 0.8;
+      opacity: $opacity-hover;
     }
   }
 
   &__logo-icon {
-    width: 2rem;
-    height: 2rem;
-    background-color: #4f46e5;
-    border-radius: 0.5rem;
+    width: $icon-md;
+    height: $icon-md;
+    background-color: $color-primary;
+    border-radius: $border-radius-lg;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
-    font-weight: bold;
-    font-size: 1.125rem;
+    color: $color-white;
+    font-weight: $font-weight-bold;
+    font-size: $font-size-lg;
   }
 
   &__logo-text {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #1f2937;
+    font-size: $font-size-2xl;
+    font-weight: $font-weight-bold;
+    color: $color-gray-800;
   }
 
   &__nav-links {
     display: flex;
-    gap: 1.5rem;
+    gap: $spacing-6;
   }
 
   &__nav-link {
-    color: #6b7280;
+    color: $color-gray-500;
     text-decoration: none;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    padding: 0.5rem 0.75rem;
-    border-radius: 0.375rem;
+    font-weight: $font-weight-medium;
+    transition: $transition-all;
+    padding: $spacing-2 $spacing-3;
+    border-radius: $border-radius-md;
     position: relative;
 
     &:hover {
-      color: #4f46e5;
-      background-color: #f8fafc;
+      color: $color-primary;
+      background-color: $color-slate-50;
     }
 
     &--active {
-      color: #4f46e5;
-      font-weight: 600;
-      background-color: #eef2ff;
+      color: $color-primary;
+      font-weight: $font-weight-semibold;
+      background-color: $color-primary-light;
       
       &::after {
         content: '';
         position: absolute;
-        bottom: -1rem;
+        bottom: -$spacing-4;
         left: 50%;
         transform: translateX(-50%);
-        width: 0.5rem;
-        height: 0.125rem;
-        background-color: #4f46e5;
-        border-radius: 0.125rem;
+        width: $spacing-2;
+        height: $border-radius-sm;
+        background-color: $color-primary;
+        border-radius: $border-radius-sm;
       }
     }
   }
 
   // Responsive adjustments
-  @media (max-width: 767px) {
-    padding: 0.75rem 1rem;
+  @media (max-width: #{$breakpoint-md - 1px}) {
+    padding: $spacing-3 $spacing-4;
 
     &__logo-text {
-      font-size: 1.25rem;
+      font-size: $font-size-xl;
     }
 
     &__logo-icon {
       width: 1.75rem;
       height: 1.75rem;
-      font-size: 1rem;
+      font-size: $font-size-base;
     }
 
     &__nav-links {
-      gap: 1rem;
+      gap: $spacing-4;
     }
 
     &__nav-link {
-      font-size: 0.875rem;
+      font-size: $font-size-sm;
     }
   }
 }

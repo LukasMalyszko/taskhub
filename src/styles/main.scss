@@ -1,0 +1,36 @@
+// Main SCSS file - imports all global styles and variables
+// Import this file in your components to access all design tokens
+
+@import './variables';
+
+// ========================================
+// GLOBAL STYLES (if needed)
+// ========================================
+
+// You can add global styles here that should be available across all components
+// For example: reset styles, utility classes, etc.
+
+// Example utility classes using variables:
+.text-primary {
+  color: $color-primary;
+}
+
+.text-secondary {
+  color: $color-secondary;
+}
+
+.bg-primary {
+  background-color: $color-primary;
+}
+
+.shadow-sm {
+  box-shadow: $shadow-sm;
+}
+
+.shadow-md {
+  box-shadow: $shadow-md;
+}
+
+.transition-all {
+  transition: $transition-all;
+}
