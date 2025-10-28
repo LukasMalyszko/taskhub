@@ -5,7 +5,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { RootState } from '@/store'
 import { addTask, updateTaskStatus, deleteTask, updateTask, clearAllTasks, Task, TaskStatus } from '@/store/taskSlice'
 import { sessionStorageUtils, useHydrateStore } from '@/utils'
-import Link from 'next/link'
+import { Navbar } from '@/components'
 import './TasksPage.scss'
 
 export const TasksPage = () => {
@@ -141,27 +141,10 @@ export const TasksPage = () => {
   }
 
   return (
-    <main className="tasks-page">
-      {/* Header */}
-      <header className="tasks-page__header">
-        <nav className="tasks-page__nav">
-          <Link href="/" className="tasks-page__logo">
-            <div className="tasks-page__logo-icon">T</div>
-            <span className="tasks-page__logo-text">TaskHub</span>
-          </Link>
-          <div className="tasks-page__nav-links">
-            <Link href="/" className="tasks-page__nav-link">
-              Home
-            </Link>
-            <Link href="/about" className="tasks-page__nav-link">
-              About
-            </Link>
-          </div>
-        </nav>
-      </header>
-
-      {/* Main Content */}
-      <div className="tasks-page__container">
+    <>
+      <Navbar />
+      <main className="tasks-page">
+        <div className="tasks-page__container">
         <div className="tasks-page__title-section">
           <h1 className="tasks-page__title">Task Management</h1>
           <div className="tasks-page__title-actions">
@@ -573,7 +556,8 @@ export const TasksPage = () => {
             </div>
           </div>
         </div>
-      </div>
-    </main>
+        </div>
+      </main>
+    </>
   )
 }

@@ -1,29 +1,14 @@
 import Link from 'next/link'
+import { Navbar } from '@/components'
 import './HomePage.scss'
 
 export const HomePage = () => {
   return (
-    <main className="home-page">
-      {/* Header */}
-      <header className="home-page__header">
-        <nav className="home-page__nav">
-          <div className="home-page__logo">
-            <div className="home-page__logo-icon">TH</div>
-            <span className="home-page__logo-text">TaskHub</span>
-          </div>
-          <div className="home-page__nav-links">
-            <Link href="/tasks" className="home-page__nav-link">
-              Tasks
-            </Link>
-            <Link href="/about" className="home-page__nav-link">
-              About
-            </Link>
-          </div>
-        </nav>
-      </header>
-
-      {/* Hero Section */}
-      <section className="home-page__hero">
+    <>
+      <Navbar />
+      <main className="home-page">
+        {/* Hero Section */}
+        <section className="home-page__hero">
         <h1 className="home-page__hero-title">
           Organize Your Tasks,
           <span className="home-page__hero-title--accent">Achieve More</span>
@@ -107,6 +92,7 @@ export const HomePage = () => {
           </div>
         </div>
       </footer>
-    </main>
+      </main>
+    </>
   )
 }
