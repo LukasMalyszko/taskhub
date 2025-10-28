@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Navbar } from '@/components'
+import { Navbar, Footer } from '@/components'
 import './HomePage.scss'
 
 export const HomePage = () => {
@@ -80,19 +80,8 @@ export const HomePage = () => {
         </Link>
       </section>
 
-      {/* Footer */}
-      <footer className="home-page__footer">
-        <div className="home-page__footer-content">
-          <div className="home-page__footer-logo">
-            <div className="home-page__footer-logo-icon">T</div>
-            <span className="home-page__footer-logo-text">TaskHub</span>
-          </div>
-          <div className="home-page__footer-copyright">
-            © {new Date().getFullYear()} TaskHub. Built with Next.js and Redux.
-          </div>
-        </div>
-      </footer>
       </main>
+      <Footer />
     </>
   )
 }

@@ -5,7 +5,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { RootState } from '@/store'
 import { addTask, updateTaskStatus, deleteTask, updateTask, clearAllTasks, Task, TaskStatus } from '@/store/taskSlice'
 import { sessionStorageUtils, useHydrateStore } from '@/utils'
-import { Navbar } from '@/components'
+import { Navbar, Footer } from '@/components'
 import './TasksPage.scss'
 
 export const TasksPage = () => {
@@ -558,6 +558,7 @@ export const TasksPage = () => {
         </div>
         </div>
       </main>
+      <Footer />
     </>
   )
 }
